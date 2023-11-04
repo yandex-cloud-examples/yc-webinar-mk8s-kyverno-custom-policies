@@ -1,5 +1,17 @@
-# Название сценария
+# Custom policy for Kyverno
 
-Описание сценария и инструкция по его применению.
+Набор Custom Policy 
 
-Для практических руководств обязательна ссылка на документацию.
+- allow-actions-with-policys-only-silo-sa
+Разрешает работу с ClusterPolicy только сервисному аккаунту управления ИБ
+
+- deny-attach-by-pod-and-container
+Блокирует attach к контейнеру (позволяет выполнять команды)
+
+- mutate-securitycontext-seccomp
+Принудительно добавляет в каждый deployment/pod RuntimeDefault профиль seccomp (защищает от множества уязв)
+
+- restrict-image-registries
+Разрешает загрузку образов только из "cr.yandex/*"
+
+Будет пополняться
